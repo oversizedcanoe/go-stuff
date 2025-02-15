@@ -22,6 +22,9 @@ func promptNumber(ordinalPositionName string) int {
 		fmt.Println("Enter " + ordinalPositionName + " number:")
 		fmt.Scanln(&input)
 		number, err := strconv.Atoi(input)
+
+		// Can also do in one line:
+		// if number, err := strconv.Atoi(input); err != nil {
 		if err != nil {
 			fmt.Println("Bad input '" + input + "'. Try again")
 		} else {
